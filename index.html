@@ -128,12 +128,14 @@
 
   .info { padding: 20px 22px 22px; display: grid; gap: 12px; }
   .info h3 { font-size: 15px; font-weight: 700; letter-spacing: -0.015em; }
-  .role { font-size: 12px; font-weight: 600; color: var(--orange); margin-top: 3px; }
-  .desc { font-size: 12.5px; line-height: 1.7; font-weight: 500; color: rgba(73, 98, 110, 0.9); }
-  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
-  .tags span { font-size: 10.5px; font-weight: 600; padding: 4px 10px; border-radius: 999px; background: rgba(170, 176, 144, 0.22); color: var(--slate); }
-  .crop { font-size: 11.5px; line-height: 1.65; font-weight: 500; padding-top: 12px; border-top: 1px solid var(--line); color: rgba(73, 98, 110, 0.82); }
-  .crop b { color: var(--slate); font-weight: 700; }
+  .top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+  .rank { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; color: var(--orange); margin-bottom: 4px; text-transform: uppercase; }
+  .fmt { flex: none; display: inline-flex; align-items: center; gap: 7px; font-size: 10.5px; font-weight: 700; letter-spacing: 0.04em; padding: 5px 11px; border-radius: 999px; background: var(--slate); color: var(--cream); }
+  .fmt i { display: inline-block; border: 1.5px solid currentColor; border-radius: 2px; }
+  .fmt.land i { width: 14px; height: 9px; }
+  .fmt.sq i { width: 10px; height: 10px; }
+  .why { font-size: 12.5px; line-height: 1.7; font-weight: 500; padding-top: 12px; border-top: 1px solid var(--line); color: rgba(73, 98, 110, 0.9); }
+  .why b { color: var(--slate); font-weight: 700; }
 
   /* ---------- Lightbox ---------- */
   .lb { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: 28px; background: rgba(40, 56, 64, 0.88); opacity: 0; pointer-events: none; transition: opacity 0.5s var(--ease); }
@@ -234,88 +236,93 @@
           <h2 data-split>Task 2</h2>
           <span class="t" data-split>5 minutes</span>
         </div>
-        <p>These five images were chosen for their versatility. Each one speaks for itself and keeps its context when cropped for different Google Ad sizes.</p>
+        <p>My top five photos for Google display ads, listed in order of priority. I ranked them by how clearly each one sells the community at a glance, then matched each to the ad format where its subject sits best: landscape (1.91:1) or square (1:1).</p>
       </div>
 
       <div class="grid">
 
         <article class="card wide" style="--d:0ms">
-          <button class="shot" data-full="Exterior2.jpg" aria-label="View Exterior2.jpg full size" style="--pos: 50% 78%">
-            <img src="Exterior2.jpg" alt="Full facade of the building with ground-floor glass" loading="lazy">
-            <span class="file">Exterior2.jpg</span>
+          <button class="shot" data-full="Interior12.jpg" aria-label="View Interior12.jpg full size" style="--pos: 50% 50%">
+            <img src="Interior12.jpg" alt="Lounge kitchen with red poppies on a white island and the downtown skyline through floor-to-ceiling windows" loading="lazy">
+            <span class="file">Interior12.jpg</span>
           </button>
           <div class="info">
-            <div>
-              <h3>Building exterior</h3>
-              <p class="role">Establishing shot</p>
+            <div class="top">
+              <div>
+                <p class="rank">Pick 01</p>
+                <h3>Rooftop lounge</h3>
+              </div>
+              <span class="fmt land"><i></i>Landscape</span>
             </div>
-            <p class="desc">The full facade with the ground-floor glass. It shows the scale and character of the building in a single frame.</p>
-            <div class="tags"><span>Establishing</span><span>Architecture</span><span>Scale</span><span>Presence</span></div>
-            <p class="crop"><b>Crop tip:</b> Crop out the speed-limit sign on the right. Keep the lobby glass and lower floors, where the power lines are least visible.</p>
+            <p class="why"><b>Why:</b> Red poppies, orange stools and a full downtown skyline make it the most eye-catching shot, and landscape keeps the whole window wall in frame.</p>
           </div>
         </article>
 
         <article class="card" style="--d:90ms">
-          <button class="shot" data-full="Interior6.jpg" aria-label="View Interior6.jpg full size" style="--pos: 40% 50%">
-            <img src="Interior6.jpg" alt="Lobby with tiled fireplace, open staircase and a person working on a laptop" loading="lazy">
+          <button class="shot" data-full="Interior6.jpg" aria-label="View Interior6.jpg full size" style="--pos: 50% 50%">
+            <img src="Interior6.jpg" alt="Lobby with a tiled fireplace, open staircase and a resident working at a window counter" loading="lazy">
             <span class="file">Interior6.jpg</span>
           </button>
           <div class="info">
-            <div>
-              <h3>Lobby lounge</h3>
-              <p class="role">Lifestyle hero</p>
+            <div class="top">
+              <div>
+                <p class="rank">Pick 02</p>
+                <h3>Lobby lounge</h3>
+              </div>
+              <span class="fmt land"><i></i>Landscape</span>
             </div>
-            <p class="desc">A tiled fireplace, open staircase and a resident working at the window bar. Community and warmth in one frame.</p>
-            <div class="tags"><span>Lifestyle</span><span>Warm</span><span>Aspirational</span><span>Human</span></div>
-            <p class="crop"><b>Crop tip:</b> Center on the fireplace and the person on the laptop.</p>
+            <p class="why"><b>Why:</b> The fireplace, open staircase and a resident on a laptop sell community at a glance, and landscape keeps both ends of the scene.</p>
           </div>
         </article>
 
         <article class="card" style="--d:0ms">
-          <button class="shot" data-full="Interior12.jpg" aria-label="View Interior12.jpg full size" style="--pos: 50% 50%">
-            <img src="Interior12.jpg" alt="Rooftop lounge kitchen with red poppies and the city skyline" loading="lazy">
-            <span class="file">Interior12.jpg</span>
+          <button class="shot" data-full="Interior11.jpg" aria-label="View Interior11.jpg full size" style="--pos: 40% 50%">
+            <img src="Interior11.jpg" alt="Lounge with a green curved sectional, bold patterned wall and statement light fixture" loading="lazy">
+            <span class="file">Interior11.jpg</span>
           </button>
           <div class="info">
-            <div>
-              <h3>Rooftop lounge</h3>
-              <p class="role">Views and amenities</p>
+            <div class="top">
+              <div>
+                <p class="rank">Pick 03</p>
+                <h3>Social lounge</h3>
+              </div>
+              <span class="fmt sq"><i></i>Square</span>
             </div>
-            <p class="desc">Floor-to-ceiling windows frame the skyline behind the bar seating. A strong visual for amenities messaging.</p>
-            <div class="tags"><span>Skyline</span><span>Premium</span><span>Vibrant</span><span>Differentiator</span></div>
-            <p class="crop"><b>Crop tip:</b> Keep the poppies and the skyline in the frame.</p>
+            <p class="why"><b>Why:</b> The green sectional, patterned wall and statement light give the property real personality, and the centred layout holds up in a square crop.</p>
           </div>
         </article>
 
         <article class="card" style="--d:90ms">
-          <button class="shot" data-full="Unit4.jpg" aria-label="View Unit4.jpg full size" style="--pos: 40% 50%">
-            <img src="Unit4.jpg" alt="Open-plan apartment with a black kitchen island and skyline windows" loading="lazy">
+          <button class="shot" data-full="Unit4.jpg" aria-label="View Unit4.jpg full size" style="--pos: 50% 50%">
+            <img src="Unit4.jpg" alt="Open-plan apartment with a black kitchen island and windows with a skyline view" loading="lazy">
             <span class="file">Unit4.jpg</span>
           </button>
           <div class="info">
-            <div>
-              <h3>Apartment living area</h3>
-              <p class="role">Realistic apartment shot</p>
+            <div class="top">
+              <div>
+                <p class="rank">Pick 04</p>
+                <h3>Apartment living area</h3>
+              </div>
+              <span class="fmt land"><i></i>Landscape</span>
             </div>
-            <p class="desc">An open-plan unit with a kitchen island and city-view windows. It shows what a renter actually gets.</p>
-            <div class="tags"><span>Bright</span><span>Spacious</span><span>Realistic</span><span>Conversion</span></div>
-            <p class="crop"><b>Crop tip:</b> Keep the skyline window and the kitchen island.</p>
+            <p class="why"><b>Why:</b> A bright open-plan unit with a skyline view shows what a renter actually gets, and landscape keeps the windows and island together.</p>
           </div>
         </article>
 
         <article class="card" style="--d:180ms">
-          <button class="shot" data-full="Interior11.jpg" aria-label="View Interior11.jpg full size" style="--pos: 35% 50%">
-            <img src="Interior11.jpg" alt="Lounge with a curved green sofa and patterned wallpaper" loading="lazy">
-            <span class="file">Interior11.jpg</span>
+          <button class="shot" data-full="Exterior2.jpg" aria-label="View Exterior2.jpg full size" style="--pos: 30% 75%">
+            <img src="Exterior2.jpg" alt="Six-storey building exterior with a glass-fronted ground floor lobby" loading="lazy">
+            <span class="file">Exterior2.jpg</span>
           </button>
           <div class="info">
-            <div>
-              <h3>Social lounge</h3>
-              <p class="role">Personality and social space</p>
+            <div class="top">
+              <div>
+                <p class="rank">Pick 05</p>
+                <h3>Building exterior</h3>
+              </div>
+              <span class="fmt sq"><i></i>Square</span>
             </div>
-            <p class="desc">A curved green sectional, bold patterned wall and statement chandelier give the property a recognisable personality.</p>
-            <div class="tags"><span>Colorful</span><span>Social</span><span>Distinctive</span><span>Personality</span></div>
-            <p class="crop"><b>Crop tip:</b> Center on the green sofa and the wallpaper.</p>
+            <p class="why"><b>Why:</b> It shows the building and its glass lobby, but power lines and street clutter keep it last; a left-side square crop avoids the speed-limit sign.</p>
           </div>
         </article>
 
